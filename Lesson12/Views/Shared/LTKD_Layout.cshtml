@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Lê Trần Khánh Duy", "LTKDIndex", "LTKDHome", new { area = "" }, new { @class = "navbar-brand" })
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+</div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("LTKDHome", "LTKDIndex", "LTKDHome", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("LTKDAbout", "LTKDAbout", "LTKDHome", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("LTKDContact", "LTKDContact", "LTKDHome", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("LTKD:Cổng Sách", "LTKDIndex", "Ltkd_SACH", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("LTKD:Cổng Tác Giả", "LTKDIndex", "Ltkd_TacGia", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LeTranKhanhDuy_2210900020Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="LeTranKhanhDuy_SACH">
+    <Key>
+      <PropertyRef Name="Ltkd_MaSach" />
+    </Key>
+    <Property Name="Ltkd_MaSach" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Ltkd_TenSach" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ltkd_SoTrang" Type="int" />
+    <Property Name="Ltkd_NamXB" Type="int" />
+    <Property Name="Ltkd_MaTG" Type="char" MaxLength="3" />
+    <Property Name="Ltkd_TrangThai" Type="bit" />
+  </EntityType>
+  <EntityType Name="LeTranKhanhDuy_TACGIA">
+    <Key>
+      <PropertyRef Name="Ltkd_MaTG" />
+    </Key>
+    <Property Name="Ltkd_MaTG" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="Ltkd_TenTG" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityContainer Name="LeTranKhanhDuy_2210900020ModelStoreContainer">
+    <EntitySet Name="LeTranKhanhDuy_SACH" EntityType="Self.LeTranKhanhDuy_SACH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LeTranKhanhDuy_TACGIA" EntityType="Self.LeTranKhanhDuy_TACGIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
